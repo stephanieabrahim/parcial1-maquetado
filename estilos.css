@@ -528,13 +528,13 @@ footer {
     .mindful {
         flex-direction: row;
     }
-
+    
     .mindful-foto {
         height: 14rem;
     }
 
     .video {
-        height: 55%;
+        height: 75%;
 
     }
 
