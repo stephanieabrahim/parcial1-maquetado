@@ -391,11 +391,6 @@ iframe {
     width: 2.5rem;
 }
 
-.mundo,
-.flecha {
-    width: 1.5rem;
-}
-
 .facebook,
 .instagram,
 .twitter {
@@ -412,15 +407,39 @@ footer {
     align-items: center;
 }
 
-.subscribete {
+.button-subscribete {
+    transition-duration: 0.4s;
+    box-shadow: 0 5px 15px #193047;
+    border-radius: 4px;
+
     background-color: #653924;
     font-size: 1rem;
     padding: 0.7rem;
-
     border: 0.1rem solid #653924;
     color: white;
-}
-
+  }
+  
+  .button-subscribete:hover {
+    background: #6d3f2a;
+    box-shadow: 0px 2px 10px 5px #653924;
+    color: white;
+  }
+  
+  .button-subscribete:after {
+    content: "";
+    background: #653924;
+    opacity: 0;
+    transition: all 0.8s
+  }
+  
+  .button-subscribeteactive:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+  }
+  
+  .button-subscribete:focus { outline:0; }
 .contenedor-email {
     display: flex;
     align-items: center;
@@ -430,9 +449,14 @@ footer {
     border: 0.1rem solid #653924;
 }
 
-.contenedor-email p {
-    margin: 0.3rem;
-    font-size: 1rem;
+#input-email {
+    padding: 0.5rem;
+    background: none;
+    border: none;
+}
+#input-email::before{
+    background-image: linear-gradient(to right, #FFE886, #F1C1A3, #FFE886);
+
 }
 
 .subscribete-newsletter {
@@ -449,19 +473,6 @@ footer {
     color: #653924;
     flex-direction: column;
     margin-top: 1rem;
-}
-
-.idioma {
-    display: flex;
-    align-items: center;
-    margin-right: 1rem;
-}
-
-.idioma p {
-    color: #653924;
-    font-size: 1.5rem;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
 }
 
 .info ul {
